@@ -60,3 +60,42 @@ let users = [
     uImage: "https://i.pravatar.cc/150?img=10"
   }
 ];
+
+
+
+let div = document.querySelector("#mainCard")
+
+// showing first user
+
+let currIndex = 0;
+// console.log(users);
+
+function showUser(){
+    let cUser = users[currIndex]
+    console.log(cUser.uName); // cuurent user with index
+
+    div.innerHTML = `
+      <img src="" alt="">
+
+        <div id="info">
+            <h1>${cUser.uName}</h1>
+            <p>${cUser.uRole}</p>
+        </div>
+
+        <div id="comment">
+            <p>${cUser.ucomment}</p>
+        </div>
+
+        <div id="btns">
+            <i onclick="goBack()" class="fa-solid fa-less-than"></i>
+            <i onclick="goNext()" class="fa-solid fa-greater-than"></i>
+        </div>
+
+        <div id="surprise">
+            <button>surprise</button>
+        </div>    
+    `;
+}
+
+showUser()
+
