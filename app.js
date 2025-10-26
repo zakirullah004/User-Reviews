@@ -75,7 +75,7 @@ function showUser(){
     // console.log(cUser.uName); // cuurent user with index
 
     div.innerHTML = `
-      <img src="" alt="">
+      <img src="${cUser.uImage}" alt="">
 
         <div id="info">
             <h1>${cUser.uName}</h1>

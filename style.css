@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height:100vh;
+    font-family:"Open Sans",sans-serif;
+    place-content: center;
+    place-items:center;
+}
+#mainCard{
+    background-color: rgb(216, 235, 236);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width:600px;
+    gap:1.4rem;
+    padding:30px 40px;
+    box-shadow:1px 1px 10px #323232;
+    max-height:700px;
+}
+
+img{
+    border-radius: 50%;
+}
+
+#info{
+    text-align:center;
+    /* line-height:15px; */
+}
+#info p{
+    color:crimson;
+    font-weight: 700;
+    letter-spacing:1px;
+    font-size: 18px;
+}
+#comment{
+    line-height:1.5rem;
+    text-align: center;
+}
+#btns i{
+    color:rgb(54, 79, 81);
+    font-size:18px;
+    font-weight:900;
+    margin:0px 5px;
+}
+
+button{
+    background:transparent;
+    border-radius: 6px;
+    padding:5px 20px;
+    font-size:14px;
+    letter-spacing:1px;
+    border: 2px solid cyan;
+    box-shadow: 1px 1px 10px rgb(106, 135, 135);
+}
