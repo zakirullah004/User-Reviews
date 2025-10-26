@@ -133,3 +133,21 @@ function randUser(){
 
 showUser()
 
+
+
+let openImg =  document.querySelector("#hamImg")
+let closeImg =  document.querySelector("#closeImg")
+let ul =  document.querySelector("ul")
+
+
+openImg.addEventListener('click',function(){
+  openImg.classList.add("hide")
+  closeImg.classList.add("show")
+  ul.classList.add("verticalNav")
+})
+
+closeImg.addEventListener('click',function(){
+  openImg.classList.remove("hide")
+  closeImg.classList.remove("show")
+  ul.classList.remove("verticalNav")
+})

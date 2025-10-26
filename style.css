@@ -17,7 +17,6 @@ body{
 }
 
 nav{
-    /* background-color: white; */
     color: rgb(216, 235, 236);
     display: flex;
     justify-content: space-between;
@@ -25,6 +24,22 @@ nav{
     height:80px;
     padding:0px 40px;
     border-bottom:2px solid cyan;
+}
+ .verticalNav{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    height: 600px;
+    background-color:white;
+    color: #323232;
+    z-index: 1;
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:100px;
 }
 nav > h1{
     font-size: 28px;
@@ -61,7 +76,7 @@ li:nth-child(3){
     position: relative;
     border-radius:6px;
 }
-img{
+#mainCard img{
     width:150px;
     height:150px;
     object-fit: cover;
@@ -116,4 +131,76 @@ button{
     &:active{
         transform: scale(0.9);
     }
+}
+
+.open{
+    width: 70px;
+    height: 70px;
+    display: none;
+}
+.close{
+    display: none;
+    height: 50px;
+    width:50px;
+}
+.hide{
+    display: none;
+}
+
+
+@media screen and (max-width:768px) {
+
+    #wrapper{
+        padding:0px 20px;
+    }
+    nav > h1{
+        font-size:24px;
+    }
+    nav > ul {
+        display: none;
+    }
+    .open {
+        display:block;
+    }
+    .close{
+        width: 40px;
+        height:40px;
+    }
+    .show{
+        display:block !important;
+        position: absolute;
+        top: 20px;
+        right:20px;
+        background-color: black;
+        z-index: 11;
+    }
+    
+}
+
+@media screen and (max-width:560px){
+
+    #mainCard{
+        margin-top:20px;
+        padding:30px 10px;
+        height: auto;
+        gap: 1.2rem;
+    }
+    nav > h1{
+        font-size:20px;
+    }
+    nav{
+        padding:10px;
+    }
+    #surprise{
+        text-align: center;
+        width:100%;
+    }
+    #surprise button{
+        width: 100%;
+    }
+    #btns i{
+    font-size:26px;
+    font-weight:900;
+    margin:0px 5px;
+}
 }
