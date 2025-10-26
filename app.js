@@ -72,7 +72,7 @@ let currIndex = 0;
 
 function showUser(){
     let cUser = users[currIndex]
-    console.log(cUser.uName); // cuurent user with index
+    // console.log(cUser.uName); // cuurent user with index
 
     div.innerHTML = `
       <img src="" alt="">
@@ -95,6 +95,28 @@ function showUser(){
             <button>surprise</button>
         </div>    
     `;
+};
+
+
+function goNext(){
+    currIndex++;
+    // console.log(currIndex);
+    // console.log(users[currIndex].uName);
+
+    if(currIndex >= users.length){
+        currIndex = 0;
+    }
+    showUser();
+}
+
+function goBack(){
+    currIndex--;
+
+    if(currIndex < 0){
+        currIndex = users.length - 1;
+    }
+
+    showUser()
 }
 
 showUser()
