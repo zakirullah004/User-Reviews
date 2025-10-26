@@ -92,7 +92,7 @@ function showUser(){
         </div>
 
         <div id="surprise">
-            <button>surprise</button>
+            <button onclick="randUser()">surprise</button>
         </div>    
     `;
 };
@@ -117,6 +117,18 @@ function goBack(){
     }
 
     showUser()
+}
+
+function randUser(){
+
+    let rand = Math.floor(Math.random() * users.length)
+
+    if(currIndex == rand){
+        rand = Math.floor(Math.random() * users.length)
+    }
+    currIndex = rand
+    showUser()
+
 }
 
 showUser()
