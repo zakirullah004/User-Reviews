@@ -8,8 +8,43 @@
 body{
     min-height:100vh;
     font-family:"Open Sans",sans-serif;
+    background-color: #323232;
+}
+#wrapper{
+    min-height:calc(80vh);
     place-content: center;
     place-items:center;
+}
+
+nav{
+    /* background-color: white; */
+    color: rgb(216, 235, 236);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:80px;
+    padding:0px 40px;
+    border-bottom:2px solid cyan;
+}
+nav > h1{
+    font-size: 28px;
+    color:cyan;
+}
+nav > ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+nav > ul > li{
+    margin:0 15px;
+    
+}
+li:nth-child(3){
+    font-weight:bold;
+    background-color:cyan;
+    color: black;
+    padding:10px 20px;
+    border-radius:6px;
 }
 #mainCard{
     background-color: rgb(216, 235, 236);
@@ -17,38 +52,58 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width:600px;
+    max-width:700px;
     gap:1.4rem;
-    padding:30px 40px;
+    padding:30px;
     box-shadow:1px 1px 10px #323232;
-    max-height:700px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    border-radius:6px;
 }
-
 img{
+    width:150px;
+    height:150px;
+    object-fit: cover;
     border-radius: 50%;
+    border-top: 5px solid #323232;
+    border-right: 5px solid red;
+    padding: 2px;
 }
 
 #info{
     text-align:center;
-    /* line-height:15px; */
+}
+#info > h1{
+    font-size:2rem;
+    letter-spacing:1px;
 }
 #info p{
     color:crimson;
     font-weight: 700;
     letter-spacing:1px;
-    font-size: 18px;
+    font-size: 1rem;
 }
-#comment{
-    line-height:1.5rem;
+#comment {
+    line-height: 1.5rem;
     text-align: center;
+    padding: 5px;
 }
 #btns i{
     color:rgb(54, 79, 81);
-    font-size:18px;
+    font-size:20px;
     font-weight:900;
     margin:0px 5px;
+    &:hover{
+        cursor: pointer;
+    }
 }
-
+.fa-greater-than:active{
+        transform:translateX(2px);
+}
+.fa-less-than:active{
+        transform:translateX(-2px);
+}
 button{
     background:transparent;
     border-radius: 6px;
@@ -57,4 +112,8 @@ button{
     letter-spacing:1px;
     border: 2px solid cyan;
     box-shadow: 1px 1px 10px rgb(106, 135, 135);
+    transition: all 0.1s;
+    &:active{
+        transform: scale(0.9);
+    }
 }
